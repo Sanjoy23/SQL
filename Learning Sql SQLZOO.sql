@@ -47,5 +47,9 @@ select name, round(population/1000000, 2), round(gdp / 1000000000, 2)
 from world
 where continent = 'South America'; 
 
---10. 
+--10. Show the name and per-capita GDP for those countries with a GDP of at least one trillion (1000000000000; that is 12 zeros). 
+--Round this value to the nearest 1000.
 
+select name, round(gdp / population, -3)
+from world
+where gdp > 1000000000000;
